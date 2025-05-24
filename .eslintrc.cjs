@@ -33,6 +33,12 @@ module.exports = {
         'newlines-between': 'always',
       },
     ],
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
   },
   globals: {
     Set: true,
@@ -68,7 +74,7 @@ module.exports = {
       },
     },
     {
-      files: ['cypress/e2e/*.cy.ts', 'cypress/**/*.ts'],
+      files: ['cypress/e2e/**/*.cy.js'],
       plugins: ['cypress'],
       extends: ['plugin:cypress/recommended'],
       env: {
